@@ -3,6 +3,15 @@ https://genui-9lzy.onrender.com
 
 **GenUI** is a full-stack AI-powered web platform that enables users to design, build, and preview user interfaces (UIs) visually and programmatically. It focuses on enhancing the learning and productivity experience for developers—especially beginners—by integrating an interactive code editor, real-time preview, Firebase authentication, and Mistral AI integration for auto-generating educational content and code.
 
+## 🧪 Test Credentials
+
+For testing purposes, you can use the following credentials:
+
+**Email:** `testuser@gmail.com`  
+**Password:** `TESTUSER`
+
+> **Note:** Make sure this test user is created in your Firebase Authentication console, or create a new account using the signup functionality.
+
 ## ✨ Key Features
 
 - **User Authentication:** Login/Signup via Firebase (Email/Google/GitHub)
@@ -149,16 +158,6 @@ npm start
 ```
 
 The frontend will run on `http://localhost:3000`
-
-## 🧪 Test Credentials
-
-For testing purposes, you can use the following credentials:
-
-**Email:** `testuser@gmail.com`  
-**Password:** `TESTUSER`
-
-> **Note:** Make sure this test user is created in your Firebase Authentication console, or create a new account using the signup functionality.
-
 ## 🔧 Environment Variables
 
 ### Backend (.env)
