@@ -19,44 +19,59 @@ https://genui-9lzy.onrender.com
 ## 📁 Project Structure
 
 ```
-genUI/
-├── backend/                    # Express.js server with AI routes
-│   ├── server.js              # Main backend server with Mistral AI logic
-│   ├── .env                   # Mistral API key and other env variables
-│   └── package.json           # Backend dependencies
+genUI
+│   .env.example
+│   .gitattributes
+│   .gitignore
+│   package-lock.json
+│   README.md
 │
-├── frontend/                   # React frontend
-│   ├── public/
-│   │   └── index.html
+├───backend
+│   │   package-lock.json
+│   │   package.json
+│   │   server.js
 │   │
-│   ├── src/
-│   │   ├── components/        # Reusable UI components
-│   │   │   ├── CodeEditor.js
-│   │   │   ├── LoadingSpinner.js
-│   │   │   ├── Navbar.js
-│   │   │   └── ProjectSettings.js
-│   │   │
-│   │   ├── context/           # Firebase Auth Context
-│   │   │   └── AuthContext.js
-│   │   │
-│   │   ├── pages/             # Route-based components
-│   │   │   ├── DashboardPage.js
-│   │   │   ├── HomePage.js
-│   │   │   ├── LoginPage.js
-│   │   │   ├── ProjectPage.js
-│   │   │   └── SignupPage.js
-│   │   │
-│   │   ├── firebase.js        # Firebase config using environment variables
-│   │   ├── App.js             # App routing and providers
-│   │   ├── index.css          # Tailwind + custom CSS
-│   │   └── index.js           # React entry point
+│   ├───api
+│   │       fallbackChapters.js
+│   │       generateChapters.js
 │   │
-│   ├── .env                   #  prefixed Firebase env keys
-│   ├── package.json           # React + Tailwind + Firebase setup
-│   └── tailwind.config.js
+│   ├───middleware
+│   │       auth.js
+│   │
+│   └───routes
+│           auth.js
+│           projects.js
 │
-├── README.md                   # This file
-└── .gitignore
+└───frontend
+    │   package-lock.json
+    │   package.json
+    │   tailwind.config.js
+    │
+    ├───public
+    │       favicon.ico
+    │       index.html
+    │
+    └───src
+        │   App.js
+        │   firebase.js
+        │   index.css
+        │   index.js
+        │
+        ├───components
+        │       CodeEditor.js
+        │       LoadingSpinner.js
+        │       Navbar.js
+        │       ProjectSettings.js
+        │
+        ├───context
+        │       AuthContext.js
+        │
+        └───pages
+                DashboardPage.js
+                HomePage.js
+                LoginPage.js
+                ProjectPage.js
+                SignupPage.js
 ```
 
 ## ⚙️ Tech Stack
