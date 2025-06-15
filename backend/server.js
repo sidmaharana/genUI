@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const axios = require('axios');
-const path = require('path');
+const path = require('path'); // ✅ Only declared once
 require('dotenv').config();
 
 const app = express();
@@ -15,9 +15,13 @@ app.use(express.urlencoded({ extended: true, limit: '50mb' }));
 // Environment Variables
 const MISTRAL_API_KEY = process.env.MISTRAL_API_KEY;
 
-// Serve static React build in production
+// ✅ Serve static React build in production
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, 'build')));
+  app.use(express.static(path.join(__dirname, '../frontend/build')));
+
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../frontend/build/index.html'));
+  });
 }
 
 // Health Check
@@ -159,13 +163,3 @@ Only return code without explanation or commentary.`;
 app.listen(PORT, () => {
   console.log(`🚀 Server running on http://localhost:${PORT}`);
 });
-
-
-const path = require('path');
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '../frontend/build')));
-
-  app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../frontend/build/index.html'));
-  });
-}
