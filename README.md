@@ -1,4 +1,5 @@
 # 🔍 GenUI - AI-Powered UI Design Platform
+https://genui-9lzy.onrender.com
 
 **GenUI** is a full-stack AI-powered web platform that enables users to design, build, and preview user interfaces (UIs) visually and programmatically. It focuses on enhancing the learning and productivity experience for developers—especially beginners—by integrating an interactive code editor, real-time preview, Firebase authentication, and Mistral AI integration for auto-generating educational content and code.
 
