@@ -50,7 +50,7 @@ genUI/
 │   │   ├── index.css          # Tailwind + custom CSS
 │   │   └── index.js           # React entry point
 │   │
-│   ├── .env                   # VITE_ prefixed Firebase env keys
+│   ├── .env                   #  prefixed Firebase env keys
 │   ├── package.json           # React + Tailwind + Firebase setup
 │   └── tailwind.config.js
 │
@@ -116,12 +116,12 @@ npm install
 Create a `.env` file in the frontend directory with your Firebase configuration:
 
 ```env
-VITE_FIREBASE_API_KEY=your_firebase_api_key
-VITE_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
-VITE_FIREBASE_PROJECT_ID=your_project_id
-VITE_FIREBASE_STORAGE_BUCKET=your_project.appspot.com
-VITE_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
-VITE_FIREBASE_APP_ID=your_app_id
+FIREBASE_API_KEY=your_firebase_api_key
+FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
+FIREBASE_PROJECT_ID=your_project_id
+FIREBASE_STORAGE_BUCKET=your_project.appspot.com
+FIREBASE_MESSAGING_SENDER_ID=your_sender_id
+FIREBASE_APP_ID=your_app_id
 ```
 
 Start the frontend development server:
@@ -155,12 +155,12 @@ PORT=5000
 ### Frontend (.env)
 
 ```env
-VITE_FIREBASE_API_KEY=your_firebase_api_key
-VITE_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
-VITE_FIREBASE_PROJECT_ID=your_project_id
-VITE_FIREBASE_STORAGE_BUCKET=your_project.appspot.com
-VITE_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
-VITE_FIREBASE_APP_ID=your_app_id
+FIREBASE_API_KEY=your_firebase_api_key
+FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
+FIREBASE_PROJECT_ID=your_project_id
+FIREBASE_STORAGE_BUCKET=your_project.appspot.com
+FIREBASE_MESSAGING_SENDER_ID=your_sender_id
+FIREBASE_APP_ID=your_app_id
 ```
 
 ## 📖 Usage
@@ -256,6 +256,4 @@ For issues and questions:
 2. Configure environment variables
 3. Deploy the backend directory
 
----
 
-**Happy Coding! 🎉**
