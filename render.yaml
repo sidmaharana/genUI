@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: genui-app
+    env: node
+    buildCommand: ./render-build.sh
+    startCommand: node backend/server.js
+    envVars:
+      - key: MISTRAL_API_KEY
+        value: your-mistral-key-here
+      - key: FIREBASE_API_KEY
+        value: your-firebase-key
+      - key: FIREBASE_AUTH_DOMAIN
+        value: your-app.firebaseapp.com
+      - key: FIREBASE_PROJECT_ID
+        value: your-project-id
+      - key: FIREBASE_STORAGE_BUCKET
+        value: your-project-id.appspot.com
+      - key: FIREBASE_MESSAGING_SENDER_ID
+        value: your-sender-id
+      - key: FIREBASE_APP_ID
+        value: your-app-id
+      - key: FIREBASE_DATABASE_URL
+        value: https://your-database-url.com
