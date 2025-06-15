@@ -256,6 +256,4 @@ For issues and questions:
 2. Configure environment variables
 3. Deploy the backend directory
 
----
 
-**Happy Coding! 🎉**
