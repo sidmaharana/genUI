@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#667eea" />
+    <meta
+      name="description"
+      content="GenUI – Design, preview, and build user interfaces visually using AI-powered workflows and live previewing."
+    />
+    <meta name="keywords" content="UI builder, interface design, visual editor, prototyping, GenUI, frontend, web builder, visual development" />
+    <meta name="author" content="GenUI Team" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="GenUI – Visual Interface Builder" />
+    <meta property="og:description" content="Design, preview, and build user interfaces visually with real-time preview and AI support." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://genui.app" />
+    <meta property="og:image" content="%PUBLIC_URL%/og-image.png" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="GenUI – Visual Interface Builder" />
+    <meta name="twitter:description" content="Create and preview modern UIs in your browser using AI-powered design assistance." />
+    <meta name="twitter:image" content="%PUBLIC_URL%/twitter-image.png" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Icons & Manifest -->
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "GenUI",
+      "description": "Visual interface builder and UI prototyping tool powered by AI.",
+      "url": "https://genui.app",
+      "applicationCategory": "DeveloperTool",
+      "operatingSystem": "All",
+      "logo": "https://genui.app/logo.png",
+      "sameAs": [
+        "https://twitter.com/genui_app",
+        "https://github.com/genui"
+      ]
+    }
+    </script>
+
+    <!-- Google Analytics (Replace with your ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+
+    <title>GenUI – Visual Interface Builder</title>
+
+    <!-- Preload CSS -->
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+      }
+
+      .loading-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      }
+
+      .loading-spinner {
+        width: 50px;
+        height: 50px;
+        border: 4px solid rgba(255, 255, 255, 0.3);
+        border-top: 4px solid white;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+
+      .loading-text {
+        color: white;
+        font-size: 18px;
+        font-weight: 500;
+        margin-top: 20px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>
+      <div style="display: flex; align-items: center; justify-content: center; min-height: 100vh; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; font-family: 'Inter', sans-serif; text-align: center; padding: 20px;">
+        <div>
+          <h1 style="font-size: 2rem; margin-bottom: 1rem;">GenUI</h1>
+          <p style="font-size: 1.2rem; margin-bottom: 2rem;">You need to enable JavaScript to use this app.</p>
+          <p style="font-size: 1rem; opacity: 0.8;">GenUI is a modern web application for UI design and previewing. Please enable JavaScript to proceed.</p>
+        </div>
+      </div>
+    </noscript>
+
+    <!-- Loading Spinner -->
+    <div id="loading-screen" class="loading-container">
+      <div style="text-align: center;">
+        <div class="loading-spinner"></div>
+        <div class="loading-text">Loading GenUI...</div>
+      </div>
+    </div>
+
+    <!-- React App Root -->
+    <div id="root"></div>
+
+    <!-- Remove Loading Screen -->
+    <script>
+      window.addEventListener('load', function() {
+        const loadingScreen = document.getElementById('loading-screen');
+        if (loadingScreen) {
+          setTimeout(() => {
+            loadingScreen.style.opacity = '0';
+            loadingScreen.style.transition = 'opacity 0.5s ease-out';
+            setTimeout(() => {
+              loadingScreen.remove();
+            }, 500);
+          }, 1000);
+        }
+      });
+    </script>
+
+    <!-- Register Service Worker -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('%PUBLIC_URL%/sw.js')
+            .then(reg => console.log('SW registered:', reg))
+            .catch(err => console.log('SW registration failed:', err));
+        });
+      }
+    </script>
+  </body>
+</html>
