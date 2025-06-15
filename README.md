@@ -10,8 +10,6 @@ For testing purposes, you can use the following credentials:
 **Email:** `testuser@gmail.com`  
 **Password:** `TESTUSER`
 
-> **Note:** Make sure this test user is created in your Firebase Authentication console, or create a new account using the signup functionality.
-
 ## ✨ Key Features
 
 - **User Authentication:** Login/Signup via Firebase (Email/Google/GitHub)
