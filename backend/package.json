@@ -1,7 +1,7 @@
 {
-  "name": "codementor-backend",
+  "name": "genai-backend",
   "version": "1.0.0",
-  "description": "CodeMentor Backend API",
+  "description": "GenUI Backend API",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -28,6 +28,6 @@
     "api",
     "nodejs"
   ],
-  "author": "CodeMentor Team",
+  "author": "GenUI Team",
   "license": "MIT"
 }
